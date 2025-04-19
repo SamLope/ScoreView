@@ -1,0 +1,129 @@
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MauiTAbPage.MenuPrincipal"
+            Title="MenuPrincipal"
+            BackgroundColor="White"
+            BarBackgroundColor="#fdd835"    
+            BarTextColor="Black"
+            SelectedTabColor="#e53935"
+            UnselectedTabColor="#888">
+   
+    <ContentPage Title="Home" IconImageSource="homes.png" BackgroundColor="White">
+        <StackLayout Padding="30" Spacing="25" VerticalOptions="CenterAndExpand">
+            <Image Source="logoscore.png" HeightRequest="350" HorizontalOptions="Center"/>
+
+            <Label Text="Bem-vindo ao ScoreView"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#fb8c00" />
+            
+            <Label Text="Aplicativo para classificar seu Score."
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   TextColor="#555" />
+
+            <Button Text="Iniciar Análise"
+                    Clicked="OnIniciarClicked"
+                    BackgroundColor="#fdd835" 
+                    TextColor="Black"
+                    CornerRadius="12"
+                    Padding="14"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"/>
+
+                <Label Text="Samir Lopes Rosa"
+                   FontSize="14"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="#888"/>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Score" IconImageSource="creditscore.png" BackgroundColor="White">
+        <ScrollView>
+            <StackLayout Padding="30" Spacing="20" VerticalOptions="CenterAndExpand">
+                <Image Source="logoscore.png" HeightRequest="250" HorizontalOptions="Center"/>
+
+                <Label Text="Classificação de Score"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#28a745"/>
+              
+                <Label Text="Digite seus dados:"
+                       HorizontalOptions="Center"
+                       FontSize="18"
+                       TextColor="#444"/>
+
+                <Entry x:Name="entryIdade"
+                       Placeholder="Idade" 
+                       Keyboard="Numeric" 
+                       BackgroundColor="White" 
+                       TextChanged="OnIdadeChanged"/>
+                
+                <Entry x:Name="entryRenda" 
+                       Placeholder="Renda mensal" 
+                       Keyboard="Numeric" 
+                       BackgroundColor="White" 
+                       TextChanged="OnRendaChanged"/>
+
+                <Button Text="Classificar"
+                        Clicked="OnClassificarClicked"
+                        BackgroundColor="#fb8c00" 
+                        TextColor="White"
+                        CornerRadius="10"
+                        FontSize="18"/>
+                
+                <Button Text="Limpar"
+                        Clicked="OnLimparClicked"
+                        BackgroundColor="#e53935"
+                        TextColor="White"
+                        CornerRadius="10"
+                        FontSize="18"/>
+
+                    <Label x:Name="lblResultado"
+                       FontSize="20"
+                       TextColor="#888"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+
+                    <Label Text="Samir Lopes Rosa"
+                       FontSize="14"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="#888"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Sobre" IconImageSource="sobre.png" BackgroundColor="White">
+        <ScrollView>
+            <StackLayout Padding="30" Spacing="20" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                <Image Source="logoscore.png" HeightRequest="250" HorizontalOptions="Center"/>
+                <Label Text="Sobre o ScoreView"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#FFA000"/>
+
+                <Label Text="Este aplicativo foi criado como Projeto Integrador do curso Desenvolvimento de Software do 5º semestre."
+                       FontSize="18"
+                       TextColor="#444"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Ele simula a classificação de Score com base em Idade e Renda."
+                       FontSize="18"
+                       TextColor="#444"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="Samir Lopes Rosa"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       TextColor="#888"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>
